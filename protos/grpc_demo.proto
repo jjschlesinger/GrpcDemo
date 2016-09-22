@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package GrpcDemo;
+
+message DataRequest {
+	repeated DataRequestRecord record = 1;
+}
+
+message DataRequestRecord {
+	int32 id = 1;
+}
+
+message DataResponse {
+	repeated DataReponseRecord record = 1;
+}
+
+message DataReponseRecord {
+	int32 id = 1;
+	string message = 2;
+}
+
+
+service DataAccessService {
+    rpc GetDataUnary (DataRequest) returns (DataResponse) {}
+    rpc GetDataServerStreaming (DataRequest) returns (stream DataReponseRecord) {}
+	rpc GetDataClientStreaming (stream DataRequestRecord) returns (DataResponse) {}
+	rpc GetDataBidirectionalStreaming (stream DataRequestRecord) returns (stream DataReponseRecord) {}
+}
