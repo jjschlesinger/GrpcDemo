@@ -156,5 +156,80 @@ namespace GrpcDemo {
     }
 
   }
+  public static class PubSubService
+  {
+    static readonly string __ServiceName = "GrpcDemo.PubSubService";
+
+    static readonly Marshaller<global::GrpcDemo.PubSubRequest> __Marshaller_PubSubRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcDemo.PubSubRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::GrpcDemo.PubSubResponse> __Marshaller_PubSubResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcDemo.PubSubResponse.Parser.ParseFrom);
+
+    static readonly Method<global::GrpcDemo.PubSubRequest, global::GrpcDemo.PubSubResponse> __Method_Subscribe = new Method<global::GrpcDemo.PubSubRequest, global::GrpcDemo.PubSubResponse>(
+        MethodType.DuplexStreaming,
+        __ServiceName,
+        "Subscribe",
+        __Marshaller_PubSubRequest,
+        __Marshaller_PubSubResponse);
+
+    /// <summary>Service descriptor</summary>
+    public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
+    {
+      get { return global::GrpcDemo.GrpcDemoReflection.Descriptor.Services[1]; }
+    }
+
+    /// <summary>Base class for server-side implementations of PubSubService</summary>
+    public abstract class PubSubServiceBase
+    {
+      public virtual global::System.Threading.Tasks.Task Subscribe(IAsyncStreamReader<global::GrpcDemo.PubSubRequest> requestStream, IServerStreamWriter<global::GrpcDemo.PubSubResponse> responseStream, ServerCallContext context)
+      {
+        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+      }
+
+    }
+
+    /// <summary>Client for PubSubService</summary>
+    public class PubSubServiceClient : ClientBase<PubSubServiceClient>
+    {
+      /// <summary>Creates a new client for PubSubService</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
+      public PubSubServiceClient(Channel channel) : base(channel)
+      {
+      }
+      /// <summary>Creates a new client for PubSubService that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      public PubSubServiceClient(CallInvoker callInvoker) : base(callInvoker)
+      {
+      }
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      protected PubSubServiceClient() : base()
+      {
+      }
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
+      protected PubSubServiceClient(ClientBaseConfiguration configuration) : base(configuration)
+      {
+      }
+
+      public virtual AsyncDuplexStreamingCall<global::GrpcDemo.PubSubRequest, global::GrpcDemo.PubSubResponse> Subscribe(Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return Subscribe(new CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual AsyncDuplexStreamingCall<global::GrpcDemo.PubSubRequest, global::GrpcDemo.PubSubResponse> Subscribe(CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_Subscribe, null, options);
+      }
+      protected override PubSubServiceClient NewInstance(ClientBaseConfiguration configuration)
+      {
+        return new PubSubServiceClient(configuration);
+      }
+    }
+
+    /// <summary>Creates service definition that can be registered with a server</summary>
+    public static ServerServiceDefinition BindService(PubSubServiceBase serviceImpl)
+    {
+      return ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_Subscribe, serviceImpl.Subscribe).Build();
+    }
+
+  }
 }
 #endregion

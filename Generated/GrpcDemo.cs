@@ -28,22 +28,31 @@ namespace GrpcDemo {
             "EURhdGFSZXF1ZXN0UmVjb3JkEgoKAmlkGAEgASgFIjsKDERhdGFSZXNwb25z",
             "ZRIrCgZyZWNvcmQYASADKAsyGy5HcnBjRGVtby5EYXRhUmVwb25zZVJlY29y",
             "ZCIwChFEYXRhUmVwb25zZVJlY29yZBIKCgJpZBgBIAEoBRIPCgdtZXNzYWdl",
-            "GAIgASgJMtoCChFEYXRhQWNjZXNzU2VydmljZRI/CgxHZXREYXRhVW5hcnkS",
-            "FS5HcnBjRGVtby5EYXRhUmVxdWVzdBoWLkdycGNEZW1vLkRhdGFSZXNwb25z",
-            "ZSIAElAKFkdldERhdGFTZXJ2ZXJTdHJlYW1pbmcSFS5HcnBjRGVtby5EYXRh",
-            "UmVxdWVzdBobLkdycGNEZW1vLkRhdGFSZXBvbnNlUmVjb3JkIgAwARJRChZH",
-            "ZXREYXRhQ2xpZW50U3RyZWFtaW5nEhsuR3JwY0RlbW8uRGF0YVJlcXVlc3RS",
-            "ZWNvcmQaFi5HcnBjRGVtby5EYXRhUmVzcG9uc2UiACgBEl8KHUdldERhdGFC",
-            "aWRpcmVjdGlvbmFsU3RyZWFtaW5nEhsuR3JwY0RlbW8uRGF0YVJlcXVlc3RS",
-            "ZWNvcmQaGy5HcnBjRGVtby5EYXRhUmVwb25zZVJlY29yZCIAKAEwAWIGcHJv",
-            "dG8z"));
+            "GAIgASgJIjEKDVB1YlN1YlJlcXVlc3QSCgoCaWQYASABKAkSFAoMY2hhbm5l",
+            "bF9uYW1lGAIgASgJIlwKDlB1YlN1YlJlc3BvbnNlEgoKAmlkGAEgASgJEhQK",
+            "DGNoYW5uZWxfbmFtZRgCIAEoCRIoCgdtZXNzYWdlGAMgASgLMhcuR3JwY0Rl",
+            "bW8uUHViU3ViTWVzc2FnZSIsCg1QdWJTdWJNZXNzYWdlEgoKAmlkGAEgASgF",
+            "Eg8KB21lc3NhZ2UYAiABKAky2gIKEURhdGFBY2Nlc3NTZXJ2aWNlEj8KDEdl",
+            "dERhdGFVbmFyeRIVLkdycGNEZW1vLkRhdGFSZXF1ZXN0GhYuR3JwY0RlbW8u",
+            "RGF0YVJlc3BvbnNlIgASUAoWR2V0RGF0YVNlcnZlclN0cmVhbWluZxIVLkdy",
+            "cGNEZW1vLkRhdGFSZXF1ZXN0GhsuR3JwY0RlbW8uRGF0YVJlcG9uc2VSZWNv",
+            "cmQiADABElEKFkdldERhdGFDbGllbnRTdHJlYW1pbmcSGy5HcnBjRGVtby5E",
+            "YXRhUmVxdWVzdFJlY29yZBoWLkdycGNEZW1vLkRhdGFSZXNwb25zZSIAKAES",
+            "XwodR2V0RGF0YUJpZGlyZWN0aW9uYWxTdHJlYW1pbmcSGy5HcnBjRGVtby5E",
+            "YXRhUmVxdWVzdFJlY29yZBobLkdycGNEZW1vLkRhdGFSZXBvbnNlUmVjb3Jk",
+            "IgAoATABMlUKDVB1YlN1YlNlcnZpY2USRAoJU3Vic2NyaWJlEhcuR3JwY0Rl",
+            "bW8uUHViU3ViUmVxdWVzdBoYLkdycGNEZW1vLlB1YlN1YlJlc3BvbnNlIgAo",
+            "ATABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.DataRequest), global::GrpcDemo.DataRequest.Parser, new[]{ "Record" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.DataRequestRecord), global::GrpcDemo.DataRequestRecord.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.DataResponse), global::GrpcDemo.DataResponse.Parser, new[]{ "Record" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.DataReponseRecord), global::GrpcDemo.DataReponseRecord.Parser, new[]{ "Id", "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.DataReponseRecord), global::GrpcDemo.DataReponseRecord.Parser, new[]{ "Id", "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.PubSubRequest), global::GrpcDemo.PubSubRequest.Parser, new[]{ "Id", "ChannelName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.PubSubResponse), global::GrpcDemo.PubSubResponse.Parser, new[]{ "Id", "ChannelName", "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcDemo.PubSubMessage), global::GrpcDemo.PubSubMessage.Parser, new[]{ "Id", "Message" }, null, null, null)
           }));
     }
     #endregion
@@ -441,6 +450,429 @@ namespace GrpcDemo {
     }
 
     public void MergeFrom(DataReponseRecord other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class PubSubRequest : pb::IMessage<PubSubRequest> {
+    private static readonly pb::MessageParser<PubSubRequest> _parser = new pb::MessageParser<PubSubRequest>(() => new PubSubRequest());
+    public static pb::MessageParser<PubSubRequest> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcDemo.GrpcDemoReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public PubSubRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public PubSubRequest(PubSubRequest other) : this() {
+      id_ = other.id_;
+      channelName_ = other.channelName_;
+    }
+
+    public PubSubRequest Clone() {
+      return new PubSubRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "channel_name" field.</summary>
+    public const int ChannelNameFieldNumber = 2;
+    private string channelName_ = "";
+    public string ChannelName {
+      get { return channelName_; }
+      set {
+        channelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as PubSubRequest);
+    }
+
+    public bool Equals(PubSubRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (ChannelName != other.ChannelName) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (ChannelName.Length != 0) hash ^= ChannelName.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (ChannelName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ChannelName);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (ChannelName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChannelName);
+      }
+      return size;
+    }
+
+    public void MergeFrom(PubSubRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.ChannelName.Length != 0) {
+        ChannelName = other.ChannelName;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            ChannelName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class PubSubResponse : pb::IMessage<PubSubResponse> {
+    private static readonly pb::MessageParser<PubSubResponse> _parser = new pb::MessageParser<PubSubResponse>(() => new PubSubResponse());
+    public static pb::MessageParser<PubSubResponse> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcDemo.GrpcDemoReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public PubSubResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public PubSubResponse(PubSubResponse other) : this() {
+      id_ = other.id_;
+      channelName_ = other.channelName_;
+      Message = other.message_ != null ? other.Message.Clone() : null;
+    }
+
+    public PubSubResponse Clone() {
+      return new PubSubResponse(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "channel_name" field.</summary>
+    public const int ChannelNameFieldNumber = 2;
+    private string channelName_ = "";
+    public string ChannelName {
+      get { return channelName_; }
+      set {
+        channelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 3;
+    private global::GrpcDemo.PubSubMessage message_;
+    public global::GrpcDemo.PubSubMessage Message {
+      get { return message_; }
+      set {
+        message_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as PubSubResponse);
+    }
+
+    public bool Equals(PubSubResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (ChannelName != other.ChannelName) return false;
+      if (!object.Equals(Message, other.Message)) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (ChannelName.Length != 0) hash ^= ChannelName.GetHashCode();
+      if (message_ != null) hash ^= Message.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (ChannelName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ChannelName);
+      }
+      if (message_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Message);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (ChannelName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChannelName);
+      }
+      if (message_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Message);
+      }
+      return size;
+    }
+
+    public void MergeFrom(PubSubResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.ChannelName.Length != 0) {
+        ChannelName = other.ChannelName;
+      }
+      if (other.message_ != null) {
+        if (message_ == null) {
+          message_ = new global::GrpcDemo.PubSubMessage();
+        }
+        Message.MergeFrom(other.Message);
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            ChannelName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (message_ == null) {
+              message_ = new global::GrpcDemo.PubSubMessage();
+            }
+            input.ReadMessage(message_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class PubSubMessage : pb::IMessage<PubSubMessage> {
+    private static readonly pb::MessageParser<PubSubMessage> _parser = new pb::MessageParser<PubSubMessage>(() => new PubSubMessage());
+    public static pb::MessageParser<PubSubMessage> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcDemo.GrpcDemoReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public PubSubMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public PubSubMessage(PubSubMessage other) : this() {
+      id_ = other.id_;
+      message_ = other.message_;
+    }
+
+    public PubSubMessage Clone() {
+      return new PubSubMessage(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 2;
+    private string message_ = "";
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as PubSubMessage);
+    }
+
+    public bool Equals(PubSubMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Message != other.Message) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Message);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      return size;
+    }
+
+    public void MergeFrom(PubSubMessage other) {
       if (other == null) {
         return;
       }

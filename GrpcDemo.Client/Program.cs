@@ -18,7 +18,8 @@ namespace GrpcDemo.Client
             //GetDataUnary();
             //Task.Run(() => GetDataServerStreaming()).Wait();
             //Task.Run(() => GetDataClientStreaming()).Wait();
-            Task.Run(() => GetDataBidirectionalStreaming()).Wait();
+            //Task.Run(() => GetDataBidirectionalStreaming()).Wait();
+            Task.Run(() => PubSub()).Wait();
 
         }
 
@@ -57,7 +58,7 @@ namespace GrpcDemo.Client
                 for (int i = 1; i <= 1000; i++)
                 {
                     Console.WriteLine("Requesting message Id {0} from the server", i);
-                    await call.RequestStream.WriteAsync(new DataRequestRecord {Id = i});
+                    await call.RequestStream.WriteAsync(new DataRequestRecord { Id = i });
                 }
 
                 await call.RequestStream.CompleteAsync();
@@ -98,7 +99,32 @@ namespace GrpcDemo.Client
                 await responseTask;
 
             }
+        }
 
+        static async Task PubSub()
+        {
+
+            var client = new PubSubService.PubSubServiceClient(_channel);
+
+            using (var call = client.Subscribe())
+            {
+                var responseTask = Task.Run(async () =>
+                {
+                    while (await call.ResponseStream.MoveNext())
+                    {
+                        var resp = call.ResponseStream.Current;
+                        Console.WriteLine("Received message Id {0} from the server", resp.Id);
+                    }
+                });
+
+                Console.WriteLine("Subscribing to channel1");
+                await call.RequestStream.WriteAsync(new PubSubRequest { Id = Guid.NewGuid().ToString(), ChannelName = "channel1" });
+
+                await call.RequestStream.CompleteAsync();
+
+                await responseTask;
+
+            }
         }
     }
 }

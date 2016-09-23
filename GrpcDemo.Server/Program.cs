@@ -43,6 +43,7 @@ namespace GrpcDemo.Server
             _server.Ports.Add("127.0.0.1", 51000, ServerCredentials.Insecure);
             Log.Information("Starting gRPC server: {Host}:{Port}", _server.Ports.Single().Host, _server.Ports.Single().Port);
             _server.Services.Add(DataAccessService.BindService(new DataAccessServiceImpl()));
+            _server.Services.Add(PubSubService.BindService(new PubSubServiceImpl()));
             _server.Start();
         }
 

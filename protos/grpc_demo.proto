@@ -26,3 +26,23 @@ service DataAccessService {
 	rpc GetDataClientStreaming (stream DataRequestRecord) returns (DataResponse) {}
 	rpc GetDataBidirectionalStreaming (stream DataRequestRecord) returns (stream DataReponseRecord) {}
 }
+
+message PubSubRequest {
+	string id = 1;
+	string channel_name = 2;
+}
+
+message PubSubResponse {
+	string id = 1;
+	string channel_name = 2;
+	PubSubMessage message = 3;
+}
+
+message PubSubMessage {
+	int32 id = 1;
+	string message = 2;
+}
+
+service PubSubService {
+	rpc Subscribe (stream PubSubRequest) returns (stream PubSubResponse) {}
+}
